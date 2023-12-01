@@ -82,6 +82,13 @@ binary_tree_t *binary_tree_sibling(binary_tree_t *node);
 binary_tree_t *binary_tree_uncle(binary_tree_t *node);
 
 /* `100-binary_trees_ancestor.c` */
-binary_tree_t *binary_trees_ancestor(const binary_tree_t *first, const binary_tree_t *second);
+binary_tree_t *binary_trees_ancestor(const binary_tree_t *first,
+	const binary_tree_t *second);
+
+/* `101-binary_trees_levelorder.c` */
+void binary_tree_levelorder(const binary_tree_t *first, void (*func)(int));
+
+/* Helper Functions*/
+void print_level(binary_tree_t *node, size_t level, void (*func)(int));
 
 #endif /* _BINARY_TREES_H_ */
