@@ -36,7 +36,7 @@ void print_level(binary_tree_t *node, size_t level, void (*func)(int))
 		return;
 
 	if (level == 0)
-		printf("%d\n", node->n);
+		func(node->n);
 	else
 	{
 		print_level(node->left, level - 1, func);
